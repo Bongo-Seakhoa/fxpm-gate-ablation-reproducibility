@@ -1,0 +1,2934 @@
+{
+  "metadata": {
+    "experiment_id": "ISM2026-ABLATION-20260429-223623",
+    "study_type": "replicated_calibrated_simulation",
+    "base_seed": 42,
+    "reference_seed": 42,
+    "n_replications": 100,
+    "n_symbols": 20,
+    "n_strategies": 50,
+    "n_regimes": 4,
+    "n_timeframes": 6,
+    "n_presets": 7,
+    "threshold_profile": "historical",
+    "thresholds": {
+      "g1_min_trades": 5,
+      "g2_max_drawdown": 20.0,
+      "g3_train_min_pf": null,
+      "g3_train_min_return": 0.0,
+      "g3_exceptional_val_pf": null,
+      "g3_exceptional_val_return": null,
+      "g4_min_val_return": 5.0,
+      "g5_min_return_dd_ratio": 1.0,
+      "g6_min_val_profit_factor": 1.0,
+      "g7_min_robustness": 0.75,
+      "g7_sharpe_override": null
+    },
+    "generated": "2026-04-29T22:36:23.527692",
+    "method_note": "Results are from a replicated simulation using the historical gate-threshold profile. Inference is based on paired replication-level summaries rather than pseudo-paired accepted-candidate slices from a single run."
+  },
+  "reference_run": {
+    "seed": 42,
+    "total_candidates": 6625,
+    "results_table": [
+      {
+        "preset": "all_gates",
+        "active_gates": [
+          "G1",
+          "G2",
+          "G3",
+          "G4",
+          "G5",
+          "G6",
+          "G7"
+        ],
+        "active_gate_count": 7,
+        "accepted": 343,
+        "rejected": 6282,
+        "acceptance_rate_pct": 5.2,
+        "median_robustness": 0.842,
+        "mean_robustness": 0.873,
+        "robustness_q25": 0.794,
+        "robustness_q75": 0.908,
+        "median_val_return_pct": 14.64,
+        "median_val_drawdown_pct": 7.69,
+        "median_val_pf": 1.531,
+        "median_val_return_dd": 1.876,
+        "false_acceptance_count": 0,
+        "false_acceptance_rate_pct": 0.0
+      },
+      {
+        "preset": "no_gates",
+        "active_gates": [],
+        "active_gate_count": 0,
+        "accepted": 6625,
+        "rejected": 0,
+        "acceptance_rate_pct": 100.0,
+        "median_robustness": 0.682,
+        "mean_robustness": 0.702,
+        "robustness_q25": 0.573,
+        "robustness_q75": 0.804,
+        "median_val_return_pct": 3.01,
+        "median_val_drawdown_pct": 13.89,
+        "median_val_pf": 1.05,
+        "median_val_return_dd": 0.212,
+        "false_acceptance_count": 792,
+        "false_acceptance_rate_pct": 12.0
+      },
+      {
+        "preset": "minimal",
+        "active_gates": [
+          "G1",
+          "G2"
+        ],
+        "active_gate_count": 2,
+        "accepted": 5139,
+        "rejected": 1486,
+        "acceptance_rate_pct": 77.6,
+        "median_robustness": 0.685,
+        "mean_robustness": 0.704,
+        "robustness_q25": 0.579,
+        "robustness_q75": 0.806,
+        "median_val_return_pct": 4.05,
+        "median_val_drawdown_pct": 12.28,
+        "median_val_pf": 1.099,
+        "median_val_return_dd": 0.332,
+        "false_acceptance_count": 569,
+        "false_acceptance_rate_pct": 11.1
+      },
+      {
+        "preset": "drawdown_only",
+        "active_gates": [
+          "G2"
+        ],
+        "active_gate_count": 1,
+        "accepted": 5392,
+        "rejected": 1233,
+        "acceptance_rate_pct": 81.4,
+        "median_robustness": 0.685,
+        "mean_robustness": 0.704,
+        "robustness_q25": 0.579,
+        "robustness_q75": 0.806,
+        "median_val_return_pct": 4.06,
+        "median_val_drawdown_pct": 12.29,
+        "median_val_pf": 1.099,
+        "median_val_return_dd": 0.331,
+        "false_acceptance_count": 599,
+        "false_acceptance_rate_pct": 11.1
+      },
+      {
+        "preset": "profitability_only",
+        "active_gates": [
+          "G3",
+          "G6"
+        ],
+        "active_gate_count": 2,
+        "accepted": 2782,
+        "rejected": 3843,
+        "acceptance_rate_pct": 42.0,
+        "median_robustness": 0.691,
+        "mean_robustness": 0.709,
+        "robustness_q25": 0.599,
+        "robustness_q75": 0.8,
+        "median_val_return_pct": 8.89,
+        "median_val_drawdown_pct": 11.72,
+        "median_val_pf": 1.373,
+        "median_val_return_dd": 0.756,
+        "false_acceptance_count": 159,
+        "false_acceptance_rate_pct": 5.7
+      },
+      {
+        "preset": "quality_focused",
+        "active_gates": [
+          "G2",
+          "G5",
+          "G6"
+        ],
+        "active_gate_count": 3,
+        "accepted": 1108,
+        "rejected": 5517,
+        "acceptance_rate_pct": 16.7,
+        "median_robustness": 0.682,
+        "mean_robustness": 0.702,
+        "robustness_q25": 0.592,
+        "robustness_q75": 0.794,
+        "median_val_return_pct": 14.96,
+        "median_val_drawdown_pct": 7.75,
+        "median_val_pf": 1.481,
+        "median_val_return_dd": 1.864,
+        "false_acceptance_count": 70,
+        "false_acceptance_rate_pct": 6.3
+      },
+      {
+        "preset": "robustness_focused",
+        "active_gates": [
+          "G1",
+          "G5",
+          "G7"
+        ],
+        "active_gate_count": 3,
+        "accepted": 452,
+        "rejected": 6173,
+        "acceptance_rate_pct": 6.8,
+        "median_robustness": 0.843,
+        "mean_robustness": 0.885,
+        "robustness_q25": 0.796,
+        "robustness_q75": 0.932,
+        "median_val_return_pct": 13.95,
+        "median_val_drawdown_pct": 7.32,
+        "median_val_pf": 1.399,
+        "median_val_return_dd": 1.796,
+        "false_acceptance_count": 0,
+        "false_acceptance_rate_pct": 0.0
+      }
+    ],
+    "gate_rejection_heatmap": {
+      "all_gates": {
+        "rejections": {
+          "G1": 304,
+          "G2": 1233,
+          "G3": 2201,
+          "G4": 3797,
+          "G5": 5225,
+          "G6": 3043,
+          "G7": 4359
+        },
+        "rejection_rates": {
+          "G1": 4.6,
+          "G2": 18.6,
+          "G3": 33.2,
+          "G4": 57.3,
+          "G5": 78.9,
+          "G6": 45.9,
+          "G7": 65.8
+        },
+        "first_rejections": {
+          "G1": 304,
+          "G2": 1182,
+          "G3": 1530,
+          "G4": 1248,
+          "G5": 1092,
+          "G6": 247,
+          "G7": 679
+        }
+      },
+      "no_gates": {
+        "rejections": {
+          "G1": 0,
+          "G2": 0,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        },
+        "rejection_rates": {
+          "G1": 0.0,
+          "G2": 0.0,
+          "G3": 0.0,
+          "G4": 0.0,
+          "G5": 0.0,
+          "G6": 0.0,
+          "G7": 0.0
+        },
+        "first_rejections": {
+          "G1": 0,
+          "G2": 0,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        }
+      },
+      "drawdown_only": {
+        "rejections": {
+          "G1": 0,
+          "G2": 1233,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        },
+        "rejection_rates": {
+          "G1": 0.0,
+          "G2": 18.6,
+          "G3": 0.0,
+          "G4": 0.0,
+          "G5": 0.0,
+          "G6": 0.0,
+          "G7": 0.0
+        },
+        "first_rejections": {
+          "G1": 0,
+          "G2": 1233,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        }
+      },
+      "profitability_only": {
+        "rejections": {
+          "G1": 0,
+          "G2": 0,
+          "G3": 2201,
+          "G4": 0,
+          "G5": 0,
+          "G6": 3043,
+          "G7": 0
+        },
+        "rejection_rates": {
+          "G1": 0.0,
+          "G2": 0.0,
+          "G3": 33.2,
+          "G4": 0.0,
+          "G5": 0.0,
+          "G6": 45.9,
+          "G7": 0.0
+        },
+        "first_rejections": {
+          "G1": 0,
+          "G2": 0,
+          "G3": 2201,
+          "G4": 0,
+          "G5": 0,
+          "G6": 1642,
+          "G7": 0
+        }
+      },
+      "minimal": {
+        "rejections": {
+          "G1": 304,
+          "G2": 1233,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        },
+        "rejection_rates": {
+          "G1": 4.6,
+          "G2": 18.6,
+          "G3": 0.0,
+          "G4": 0.0,
+          "G5": 0.0,
+          "G6": 0.0,
+          "G7": 0.0
+        },
+        "first_rejections": {
+          "G1": 304,
+          "G2": 1182,
+          "G3": 0,
+          "G4": 0,
+          "G5": 0,
+          "G6": 0,
+          "G7": 0
+        }
+      },
+      "quality_focused": {
+        "rejections": {
+          "G1": 0,
+          "G2": 1233,
+          "G3": 0,
+          "G4": 0,
+          "G5": 5225,
+          "G6": 3043,
+          "G7": 0
+        },
+        "rejection_rates": {
+          "G1": 0.0,
+          "G2": 18.6,
+          "G3": 0.0,
+          "G4": 0.0,
+          "G5": 78.9,
+          "G6": 45.9,
+          "G7": 0.0
+        },
+        "first_rejections": {
+          "G1": 0,
+          "G2": 1233,
+          "G3": 0,
+          "G4": 0,
+          "G5": 4012,
+          "G6": 272,
+          "G7": 0
+        }
+      },
+      "robustness_focused": {
+        "rejections": {
+          "G1": 304,
+          "G2": 0,
+          "G3": 0,
+          "G4": 0,
+          "G5": 5225,
+          "G6": 0,
+          "G7": 4359
+        },
+        "rejection_rates": {
+          "G1": 4.6,
+          "G2": 0.0,
+          "G3": 0.0,
+          "G4": 0.0,
+          "G5": 78.9,
+          "G6": 0.0,
+          "G7": 65.8
+        },
+        "first_rejections": {
+          "G1": 304,
+          "G2": 0,
+          "G3": 0,
+          "G4": 0,
+          "G5": 4986,
+          "G6": 0,
+          "G7": 883
+        }
+      }
+    },
+    "robustness_box_plots": {
+      "all_gates": {
+        "min": 0.75,
+        "q25": 0.794,
+        "median": 0.842,
+        "q75": 0.908,
+        "max": 1.634,
+        "mean": 0.873,
+        "n": 343
+      },
+      "no_gates": {
+        "min": 0.204,
+        "q25": 0.573,
+        "median": 0.682,
+        "q75": 0.804,
+        "max": 2.0,
+        "mean": 0.702,
+        "n": 6625
+      },
+      "drawdown_only": {
+        "min": 0.204,
+        "q25": 0.579,
+        "median": 0.685,
+        "q75": 0.806,
+        "max": 2.0,
+        "mean": 0.704,
+        "n": 5392
+      },
+      "profitability_only": {
+        "min": 0.335,
+        "q25": 0.599,
+        "median": 0.691,
+        "q75": 0.8,
+        "max": 1.743,
+        "mean": 0.709,
+        "n": 2782
+      },
+      "minimal": {
+        "min": 0.204,
+        "q25": 0.579,
+        "median": 0.685,
+        "q75": 0.806,
+        "max": 2.0,
+        "mean": 0.704,
+        "n": 5139
+      },
+      "quality_focused": {
+        "min": 0.354,
+        "q25": 0.592,
+        "median": 0.682,
+        "q75": 0.794,
+        "max": 1.634,
+        "mean": 0.702,
+        "n": 1108
+      },
+      "robustness_focused": {
+        "min": 0.75,
+        "q25": 0.796,
+        "median": 0.843,
+        "q75": 0.932,
+        "max": 1.889,
+        "mean": 0.885,
+        "n": 452
+      }
+    }
+  },
+  "results_table": [
+    {
+      "preset": "all_gates",
+      "active_gates": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "active_gate_count": 7,
+      "accepted": 343,
+      "rejected": 6282,
+      "acceptance_rate_pct": 5.2,
+      "median_robustness": 0.842,
+      "mean_robustness": 0.873,
+      "robustness_q25": 0.794,
+      "robustness_q75": 0.908,
+      "median_val_return_pct": 14.64,
+      "median_val_drawdown_pct": 7.69,
+      "median_val_pf": 1.531,
+      "median_val_return_dd": 1.876,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate_pct": 0.0
+    },
+    {
+      "preset": "no_gates",
+      "active_gates": [],
+      "active_gate_count": 0,
+      "accepted": 6625,
+      "rejected": 0,
+      "acceptance_rate_pct": 100.0,
+      "median_robustness": 0.682,
+      "mean_robustness": 0.702,
+      "robustness_q25": 0.573,
+      "robustness_q75": 0.804,
+      "median_val_return_pct": 3.01,
+      "median_val_drawdown_pct": 13.89,
+      "median_val_pf": 1.05,
+      "median_val_return_dd": 0.212,
+      "false_acceptance_count": 792,
+      "false_acceptance_rate_pct": 12.0
+    },
+    {
+      "preset": "minimal",
+      "active_gates": [
+        "G1",
+        "G2"
+      ],
+      "active_gate_count": 2,
+      "accepted": 5139,
+      "rejected": 1486,
+      "acceptance_rate_pct": 77.6,
+      "median_robustness": 0.685,
+      "mean_robustness": 0.704,
+      "robustness_q25": 0.579,
+      "robustness_q75": 0.806,
+      "median_val_return_pct": 4.05,
+      "median_val_drawdown_pct": 12.28,
+      "median_val_pf": 1.099,
+      "median_val_return_dd": 0.332,
+      "false_acceptance_count": 569,
+      "false_acceptance_rate_pct": 11.1
+    },
+    {
+      "preset": "drawdown_only",
+      "active_gates": [
+        "G2"
+      ],
+      "active_gate_count": 1,
+      "accepted": 5392,
+      "rejected": 1233,
+      "acceptance_rate_pct": 81.4,
+      "median_robustness": 0.685,
+      "mean_robustness": 0.704,
+      "robustness_q25": 0.579,
+      "robustness_q75": 0.806,
+      "median_val_return_pct": 4.06,
+      "median_val_drawdown_pct": 12.29,
+      "median_val_pf": 1.099,
+      "median_val_return_dd": 0.331,
+      "false_acceptance_count": 599,
+      "false_acceptance_rate_pct": 11.1
+    },
+    {
+      "preset": "profitability_only",
+      "active_gates": [
+        "G3",
+        "G6"
+      ],
+      "active_gate_count": 2,
+      "accepted": 2782,
+      "rejected": 3843,
+      "acceptance_rate_pct": 42.0,
+      "median_robustness": 0.691,
+      "mean_robustness": 0.709,
+      "robustness_q25": 0.599,
+      "robustness_q75": 0.8,
+      "median_val_return_pct": 8.89,
+      "median_val_drawdown_pct": 11.72,
+      "median_val_pf": 1.373,
+      "median_val_return_dd": 0.756,
+      "false_acceptance_count": 159,
+      "false_acceptance_rate_pct": 5.7
+    },
+    {
+      "preset": "quality_focused",
+      "active_gates": [
+        "G2",
+        "G5",
+        "G6"
+      ],
+      "active_gate_count": 3,
+      "accepted": 1108,
+      "rejected": 5517,
+      "acceptance_rate_pct": 16.7,
+      "median_robustness": 0.682,
+      "mean_robustness": 0.702,
+      "robustness_q25": 0.592,
+      "robustness_q75": 0.794,
+      "median_val_return_pct": 14.96,
+      "median_val_drawdown_pct": 7.75,
+      "median_val_pf": 1.481,
+      "median_val_return_dd": 1.864,
+      "false_acceptance_count": 70,
+      "false_acceptance_rate_pct": 6.3
+    },
+    {
+      "preset": "robustness_focused",
+      "active_gates": [
+        "G1",
+        "G5",
+        "G7"
+      ],
+      "active_gate_count": 3,
+      "accepted": 452,
+      "rejected": 6173,
+      "acceptance_rate_pct": 6.8,
+      "median_robustness": 0.843,
+      "mean_robustness": 0.885,
+      "robustness_q25": 0.796,
+      "robustness_q75": 0.932,
+      "median_val_return_pct": 13.95,
+      "median_val_drawdown_pct": 7.32,
+      "median_val_pf": 1.399,
+      "median_val_return_dd": 1.796,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate_pct": 0.0
+    }
+  ],
+  "gate_rejection_heatmap": {
+    "all_gates": {
+      "rejections": {
+        "G1": 304,
+        "G2": 1233,
+        "G3": 2201,
+        "G4": 3797,
+        "G5": 5225,
+        "G6": 3043,
+        "G7": 4359
+      },
+      "rejection_rates": {
+        "G1": 4.6,
+        "G2": 18.6,
+        "G3": 33.2,
+        "G4": 57.3,
+        "G5": 78.9,
+        "G6": 45.9,
+        "G7": 65.8
+      },
+      "first_rejections": {
+        "G1": 304,
+        "G2": 1182,
+        "G3": 1530,
+        "G4": 1248,
+        "G5": 1092,
+        "G6": 247,
+        "G7": 679
+      }
+    },
+    "no_gates": {
+      "rejections": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      },
+      "rejection_rates": {
+        "G1": 0.0,
+        "G2": 0.0,
+        "G3": 0.0,
+        "G4": 0.0,
+        "G5": 0.0,
+        "G6": 0.0,
+        "G7": 0.0
+      },
+      "first_rejections": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      }
+    },
+    "drawdown_only": {
+      "rejections": {
+        "G1": 0,
+        "G2": 1233,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      },
+      "rejection_rates": {
+        "G1": 0.0,
+        "G2": 18.6,
+        "G3": 0.0,
+        "G4": 0.0,
+        "G5": 0.0,
+        "G6": 0.0,
+        "G7": 0.0
+      },
+      "first_rejections": {
+        "G1": 0,
+        "G2": 1233,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      }
+    },
+    "profitability_only": {
+      "rejections": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 2201,
+        "G4": 0,
+        "G5": 0,
+        "G6": 3043,
+        "G7": 0
+      },
+      "rejection_rates": {
+        "G1": 0.0,
+        "G2": 0.0,
+        "G3": 33.2,
+        "G4": 0.0,
+        "G5": 0.0,
+        "G6": 45.9,
+        "G7": 0.0
+      },
+      "first_rejections": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 2201,
+        "G4": 0,
+        "G5": 0,
+        "G6": 1642,
+        "G7": 0
+      }
+    },
+    "minimal": {
+      "rejections": {
+        "G1": 304,
+        "G2": 1233,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      },
+      "rejection_rates": {
+        "G1": 4.6,
+        "G2": 18.6,
+        "G3": 0.0,
+        "G4": 0.0,
+        "G5": 0.0,
+        "G6": 0.0,
+        "G7": 0.0
+      },
+      "first_rejections": {
+        "G1": 304,
+        "G2": 1182,
+        "G3": 0,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 0
+      }
+    },
+    "quality_focused": {
+      "rejections": {
+        "G1": 0,
+        "G2": 1233,
+        "G3": 0,
+        "G4": 0,
+        "G5": 5225,
+        "G6": 3043,
+        "G7": 0
+      },
+      "rejection_rates": {
+        "G1": 0.0,
+        "G2": 18.6,
+        "G3": 0.0,
+        "G4": 0.0,
+        "G5": 78.9,
+        "G6": 45.9,
+        "G7": 0.0
+      },
+      "first_rejections": {
+        "G1": 0,
+        "G2": 1233,
+        "G3": 0,
+        "G4": 0,
+        "G5": 4012,
+        "G6": 272,
+        "G7": 0
+      }
+    },
+    "robustness_focused": {
+      "rejections": {
+        "G1": 304,
+        "G2": 0,
+        "G3": 0,
+        "G4": 0,
+        "G5": 5225,
+        "G6": 0,
+        "G7": 4359
+      },
+      "rejection_rates": {
+        "G1": 4.6,
+        "G2": 0.0,
+        "G3": 0.0,
+        "G4": 0.0,
+        "G5": 78.9,
+        "G6": 0.0,
+        "G7": 65.8
+      },
+      "first_rejections": {
+        "G1": 304,
+        "G2": 0,
+        "G3": 0,
+        "G4": 0,
+        "G5": 4986,
+        "G6": 0,
+        "G7": 883
+      }
+    }
+  },
+  "robustness_box_plots": {
+    "all_gates": {
+      "min": 0.75,
+      "q25": 0.794,
+      "median": 0.842,
+      "q75": 0.908,
+      "max": 1.634,
+      "mean": 0.873,
+      "n": 343
+    },
+    "no_gates": {
+      "min": 0.204,
+      "q25": 0.573,
+      "median": 0.682,
+      "q75": 0.804,
+      "max": 2.0,
+      "mean": 0.702,
+      "n": 6625
+    },
+    "drawdown_only": {
+      "min": 0.204,
+      "q25": 0.579,
+      "median": 0.685,
+      "q75": 0.806,
+      "max": 2.0,
+      "mean": 0.704,
+      "n": 5392
+    },
+    "profitability_only": {
+      "min": 0.335,
+      "q25": 0.599,
+      "median": 0.691,
+      "q75": 0.8,
+      "max": 1.743,
+      "mean": 0.709,
+      "n": 2782
+    },
+    "minimal": {
+      "min": 0.204,
+      "q25": 0.579,
+      "median": 0.685,
+      "q75": 0.806,
+      "max": 2.0,
+      "mean": 0.704,
+      "n": 5139
+    },
+    "quality_focused": {
+      "min": 0.354,
+      "q25": 0.592,
+      "median": 0.682,
+      "q75": 0.794,
+      "max": 1.634,
+      "mean": 0.702,
+      "n": 1108
+    },
+    "robustness_focused": {
+      "min": 0.75,
+      "q25": 0.796,
+      "median": 0.843,
+      "q75": 0.932,
+      "max": 1.889,
+      "mean": 0.885,
+      "n": 452
+    }
+  },
+  "replication_summary": {
+    "all_gates": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 306.77,
+        "median": 308.0,
+        "q25": 293.75,
+        "q75": 321.0,
+        "ci95_low": 271.425,
+        "ci95_high": 342.525,
+        "min": 263.0,
+        "max": 345.0
+      },
+      "rejected_count": {
+        "mean": 6294.97,
+        "median": 6298.0,
+        "q25": 6261.0,
+        "q75": 6329.0,
+        "ci95_low": 6190.075,
+        "ci95_high": 6398.925,
+        "min": 6169.0,
+        "max": 6420.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 4.6466,
+        "median": 4.6212,
+        "q25": 4.4645,
+        "q75": 4.8452,
+        "ci95_low": 4.1107,
+        "ci95_high": 5.1566,
+        "min": 3.9897,
+        "max": 5.2817
+      },
+      "median_robustness": {
+        "mean": 0.8355,
+        "median": 0.8355,
+        "q25": 0.8299,
+        "q75": 0.8401,
+        "ci95_low": 0.8225,
+        "ci95_high": 0.849,
+        "min": 0.821,
+        "max": 0.857
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 0.0,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "median_val_return_pct": {
+        "mean": 14.5068,
+        "median": 14.4675,
+        "q25": 14.2675,
+        "q75": 14.7525,
+        "ci95_low": 13.7159,
+        "ci95_high": 15.2605,
+        "min": 13.545,
+        "max": 15.445
+      },
+      "median_val_drawdown_pct": {
+        "mean": 7.3743,
+        "median": 7.3725,
+        "q25": 7.1238,
+        "q75": 7.6212,
+        "ci95_low": 6.6182,
+        "ci95_high": 8.031,
+        "min": 6.385,
+        "max": 8.25
+      },
+      "median_val_pf": {
+        "mean": 1.4527,
+        "median": 1.4523,
+        "q25": 1.4376,
+        "q75": 1.466,
+        "ci95_low": 1.4,
+        "ci95_high": 1.5047,
+        "min": 1.396,
+        "max": 1.531
+      },
+      "median_val_return_dd": {
+        "mean": 1.8516,
+        "median": 1.8388,
+        "q25": 1.7971,
+        "q75": 1.8966,
+        "ci95_low": 1.6954,
+        "ci95_high": 2.0353,
+        "min": 1.683,
+        "max": 2.169
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 4.545,
+          "median": 4.554,
+          "q25": 4.3873,
+          "q75": 4.708,
+          "ci95_low": 4.0163,
+          "ci95_high": 4.9939,
+          "min": 3.9315,
+          "max": 5.1028
+        },
+        "G2": {
+          "mean": 18.8035,
+          "median": 18.7467,
+          "q25": 18.5404,
+          "q75": 19.0739,
+          "ci95_low": 17.9186,
+          "ci95_high": 19.9084,
+          "min": 17.6416,
+          "max": 20.3434
+        },
+        "G3": {
+          "mean": 33.7689,
+          "median": 33.8361,
+          "q25": 33.3772,
+          "q75": 34.1362,
+          "ci95_low": 32.6808,
+          "ci95_high": 34.7952,
+          "min": 32.0732,
+          "max": 35.0822
+        },
+        "G4": {
+          "mean": 58.0759,
+          "median": 58.0726,
+          "q25": 57.6678,
+          "q75": 58.4427,
+          "ci95_low": 57.0941,
+          "ci95_high": 59.2175,
+          "min": 56.5501,
+          "max": 59.2717
+        },
+        "G5": {
+          "mean": 79.2795,
+          "median": 79.3299,
+          "q25": 78.9065,
+          "q75": 79.6256,
+          "ci95_low": 78.3727,
+          "ci95_high": 80.1143,
+          "min": 78.228,
+          "max": 80.5409
+        },
+        "G6": {
+          "mean": 45.9944,
+          "median": 46.0331,
+          "q25": 45.5181,
+          "q75": 46.4848,
+          "ci95_low": 44.7295,
+          "ci95_high": 47.2176,
+          "min": 43.7714,
+          "max": 47.4483
+        },
+        "G7": {
+          "mean": 66.0508,
+          "median": 66.0116,
+          "q25": 65.7282,
+          "q75": 66.4359,
+          "ci95_low": 64.9594,
+          "ci95_high": 67.1669,
+          "min": 64.5171,
+          "max": 67.3923
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 300.05,
+          "median": 302.0,
+          "q25": 289.0,
+          "q75": 311.0,
+          "ci95_low": 268.85,
+          "ci95_high": 331.0,
+          "min": 257.0,
+          "max": 341.0
+        },
+        "G2": {
+          "mean": 1184.97,
+          "median": 1181.5,
+          "q25": 1167.0,
+          "q75": 1202.5,
+          "ci95_low": 1131.425,
+          "ci95_high": 1259.35,
+          "min": 1082.0,
+          "max": 1273.0
+        },
+        "G3": {
+          "mean": 1554.02,
+          "median": 1552.0,
+          "q25": 1534.0,
+          "q75": 1580.25,
+          "ci95_low": 1481.0,
+          "ci95_high": 1618.05,
+          "min": 1462.0,
+          "max": 1624.0
+        },
+        "G4": {
+          "mean": 1251.96,
+          "median": 1252.5,
+          "q25": 1226.75,
+          "q75": 1276.0,
+          "ci95_low": 1182.9,
+          "ci95_high": 1332.525,
+          "min": 1166.0,
+          "max": 1343.0
+        },
+        "G5": {
+          "mean": 1066.33,
+          "median": 1071.0,
+          "q25": 1045.5,
+          "q75": 1088.0,
+          "ci95_low": 1014.95,
+          "ci95_high": 1115.525,
+          "min": 1005.0,
+          "max": 1125.0
+        },
+        "G6": {
+          "mean": 263.42,
+          "median": 263.0,
+          "q25": 252.5,
+          "q75": 275.0,
+          "ci95_low": 233.0,
+          "ci95_high": 299.625,
+          "min": 208.0,
+          "max": 307.0
+        },
+        "G7": {
+          "mean": 674.22,
+          "median": 675.5,
+          "q25": 657.0,
+          "q75": 690.5,
+          "ci95_low": 623.225,
+          "ci95_high": 715.525,
+          "min": 601.0,
+          "max": 734.0
+        }
+      }
+    },
+    "no_gates": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 6601.74,
+        "median": 6601.5,
+        "q25": 6563.75,
+        "q75": 6638.0,
+        "ci95_low": 6507.0,
+        "ci95_high": 6717.575,
+        "min": 6474.0,
+        "max": 6730.0
+      },
+      "rejected_count": {
+        "mean": 0.0,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 100.0,
+        "median": 100.0,
+        "q25": 100.0,
+        "q75": 100.0,
+        "ci95_low": 100.0,
+        "ci95_high": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "median_robustness": {
+        "mean": 0.6773,
+        "median": 0.677,
+        "q25": 0.675,
+        "q75": 0.679,
+        "ci95_low": 0.672,
+        "ci95_high": 0.682,
+        "min": 0.67,
+        "max": 0.683
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 12.582,
+        "median": 12.6075,
+        "q25": 12.2828,
+        "q75": 12.8633,
+        "ci95_low": 11.864,
+        "ci95_high": 13.3223,
+        "min": 11.0295,
+        "max": 13.8127
+      },
+      "median_val_return_pct": {
+        "mean": 2.9321,
+        "median": 2.92,
+        "q25": 2.835,
+        "q75": 3.0225,
+        "ci95_low": 2.6619,
+        "ci95_high": 3.2157,
+        "min": 2.63,
+        "max": 3.38
+      },
+      "median_val_drawdown_pct": {
+        "mean": 14.0155,
+        "median": 14.03,
+        "q25": 13.945,
+        "q75": 14.09,
+        "ci95_low": 13.78,
+        "ci95_high": 14.2229,
+        "min": 13.74,
+        "max": 14.275
+      },
+      "median_val_pf": {
+        "mean": 1.0466,
+        "median": 1.0467,
+        "q25": 1.042,
+        "q75": 1.052,
+        "ci95_low": 1.0294,
+        "ci95_high": 1.0625,
+        "min": 1.026,
+        "max": 1.072
+      },
+      "median_val_return_dd": {
+        "mean": 0.2089,
+        "median": 0.208,
+        "q25": 0.201,
+        "q75": 0.218,
+        "ci95_low": 0.1882,
+        "ci95_high": 0.2283,
+        "min": 0.182,
+        "max": 0.24
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "minimal": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 5116.72,
+        "median": 5117.0,
+        "q25": 5083.5,
+        "q75": 5145.75,
+        "ci95_low": 5020.475,
+        "ci95_high": 5214.05,
+        "min": 5004.0,
+        "max": 5259.0
+      },
+      "rejected_count": {
+        "mean": 1485.02,
+        "median": 1485.5,
+        "q25": 1462.0,
+        "q75": 1503.5,
+        "ci95_low": 1423.0,
+        "ci95_high": 1567.25,
+        "min": 1376.0,
+        "max": 1583.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 77.5058,
+        "median": 77.5176,
+        "q25": 77.2615,
+        "q75": 77.7919,
+        "ci95_low": 76.3979,
+        "ci95_high": 78.3902,
+        "min": 76.0255,
+        "max": 78.8788
+      },
+      "median_robustness": {
+        "mean": 0.6801,
+        "median": 0.68,
+        "q25": 0.678,
+        "q75": 0.682,
+        "ci95_low": 0.6745,
+        "ci95_high": 0.6855,
+        "min": 0.674,
+        "max": 0.687
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 11.7367,
+        "median": 11.7727,
+        "q25": 11.4364,
+        "q75": 12.0466,
+        "ci95_low": 10.9454,
+        "ci95_high": 12.4573,
+        "min": 10.5098,
+        "max": 12.5756
+      },
+      "median_val_return_pct": {
+        "mean": 3.8739,
+        "median": 3.8675,
+        "q25": 3.75,
+        "q75": 3.99,
+        "ci95_low": 3.5747,
+        "ci95_high": 4.1857,
+        "min": 3.525,
+        "max": 4.25
+      },
+      "median_val_drawdown_pct": {
+        "mean": 12.4111,
+        "median": 12.41,
+        "q25": 12.355,
+        "q75": 12.48,
+        "ci95_low": 12.2542,
+        "ci95_high": 12.5605,
+        "min": 12.2,
+        "max": 12.68
+      },
+      "median_val_pf": {
+        "mean": 1.0933,
+        "median": 1.093,
+        "q25": 1.089,
+        "q75": 1.099,
+        "ci95_low": 1.0744,
+        "ci95_high": 1.11,
+        "min": 1.064,
+        "max": 1.115
+      },
+      "median_val_return_dd": {
+        "mean": 0.3233,
+        "median": 0.3207,
+        "q25": 0.312,
+        "q75": 0.336,
+        "ci95_low": 0.2965,
+        "ci95_high": 0.348,
+        "min": 0.293,
+        "max": 0.359
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 4.545,
+          "median": 4.554,
+          "q25": 4.3873,
+          "q75": 4.708,
+          "ci95_low": 4.0163,
+          "ci95_high": 4.9939,
+          "min": 3.9315,
+          "max": 5.1028
+        },
+        "G2": {
+          "mean": 18.8035,
+          "median": 18.7467,
+          "q25": 18.5404,
+          "q75": 19.0739,
+          "ci95_low": 17.9186,
+          "ci95_high": 19.9084,
+          "min": 17.6416,
+          "max": 20.3434
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 300.05,
+          "median": 302.0,
+          "q25": 289.0,
+          "q75": 311.0,
+          "ci95_low": 268.85,
+          "ci95_high": 331.0,
+          "min": 257.0,
+          "max": 341.0
+        },
+        "G2": {
+          "mean": 1184.97,
+          "median": 1181.5,
+          "q25": 1167.0,
+          "q75": 1202.5,
+          "ci95_low": 1131.425,
+          "ci95_high": 1259.35,
+          "min": 1082.0,
+          "max": 1273.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "drawdown_only": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 5360.38,
+        "median": 5359.0,
+        "q25": 5322.75,
+        "q75": 5392.75,
+        "ci95_low": 5269.8,
+        "ci95_high": 5462.725,
+        "min": 5235.0,
+        "max": 5477.0
+      },
+      "rejected_count": {
+        "mean": 1241.36,
+        "median": 1239.0,
+        "q25": 1221.75,
+        "q75": 1261.25,
+        "ci95_low": 1184.85,
+        "ci95_high": 1324.625,
+        "min": 1149.0,
+        "max": 1339.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 81.1965,
+        "median": 81.2533,
+        "q25": 80.9261,
+        "q75": 81.4596,
+        "ci95_low": 80.0916,
+        "ci95_high": 82.0814,
+        "min": 79.6566,
+        "max": 82.3584
+      },
+      "median_robustness": {
+        "mean": 0.6802,
+        "median": 0.6805,
+        "q25": 0.678,
+        "q75": 0.682,
+        "ci95_low": 0.675,
+        "ci95_high": 0.685,
+        "min": 0.674,
+        "max": 0.687
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 11.7365,
+        "median": 11.7925,
+        "q25": 11.4065,
+        "q75": 12.0369,
+        "ci95_low": 10.9707,
+        "ci95_high": 12.4343,
+        "min": 10.549,
+        "max": 12.5669
+      },
+      "median_val_return_pct": {
+        "mean": 3.8739,
+        "median": 3.89,
+        "q25": 3.7538,
+        "q75": 4.0012,
+        "ci95_low": 3.61,
+        "ci95_high": 4.1529,
+        "min": 3.47,
+        "max": 4.25
+      },
+      "median_val_drawdown_pct": {
+        "mean": 12.4087,
+        "median": 12.42,
+        "q25": 12.35,
+        "q75": 12.47,
+        "ci95_low": 12.2547,
+        "ci95_high": 12.5705,
+        "min": 12.185,
+        "max": 12.64
+      },
+      "median_val_pf": {
+        "mean": 1.0932,
+        "median": 1.093,
+        "q25": 1.0879,
+        "q75": 1.0986,
+        "ci95_low": 1.077,
+        "ci95_high": 1.1086,
+        "min": 1.063,
+        "max": 1.116
+      },
+      "median_val_return_dd": {
+        "mean": 0.3234,
+        "median": 0.3213,
+        "q25": 0.311,
+        "q75": 0.336,
+        "ci95_low": 0.299,
+        "ci95_high": 0.3485,
+        "min": 0.29,
+        "max": 0.358
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 18.8035,
+          "median": 18.7467,
+          "q25": 18.5404,
+          "q75": 19.0739,
+          "ci95_low": 17.9186,
+          "ci95_high": 19.9084,
+          "min": 17.6416,
+          "max": 20.3434
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 1241.36,
+          "median": 1239.0,
+          "q25": 1221.75,
+          "q75": 1261.25,
+          "ci95_low": 1184.85,
+          "ci95_high": 1324.625,
+          "min": 1149.0,
+          "max": 1339.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "profitability_only": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 2732.41,
+        "median": 2728.5,
+        "q25": 2699.5,
+        "q75": 2758.0,
+        "ci95_low": 2652.95,
+        "ci95_high": 2836.825,
+        "min": 2597.0,
+        "max": 2907.0
+      },
+      "rejected_count": {
+        "mean": 3869.33,
+        "median": 3869.5,
+        "q25": 3838.25,
+        "q75": 3899.5,
+        "ci95_low": 3769.975,
+        "ci95_high": 3956.35,
+        "min": 3740.0,
+        "max": 4018.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 41.3885,
+        "median": 41.3869,
+        "q25": 40.9767,
+        "q75": 41.788,
+        "ci95_low": 40.2769,
+        "ci95_high": 42.6713,
+        "min": 39.7095,
+        "max": 43.2654
+      },
+      "median_robustness": {
+        "mean": 0.6864,
+        "median": 0.686,
+        "q25": 0.684,
+        "q75": 0.689,
+        "ci95_low": 0.6785,
+        "ci95_high": 0.694,
+        "min": 0.672,
+        "max": 0.697
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 7.3558,
+        "median": 7.3643,
+        "q25": 7.0594,
+        "q75": 7.791,
+        "ci95_low": 6.3355,
+        "ci95_high": 8.2595,
+        "min": 5.7153,
+        "max": 8.537
+      },
+      "median_val_return_pct": {
+        "mean": 8.7915,
+        "median": 8.78,
+        "q25": 8.6638,
+        "q75": 8.9612,
+        "ci95_low": 8.4295,
+        "ci95_high": 9.1205,
+        "min": 8.325,
+        "max": 9.19
+      },
+      "median_val_drawdown_pct": {
+        "mean": 11.9872,
+        "median": 11.9925,
+        "q25": 11.8712,
+        "q75": 12.1,
+        "ci95_low": 11.6866,
+        "ci95_high": 12.27,
+        "min": 11.56,
+        "max": 12.44
+      },
+      "median_val_pf": {
+        "mean": 1.3628,
+        "median": 1.363,
+        "q25": 1.3565,
+        "q75": 1.368,
+        "ci95_low": 1.347,
+        "ci95_high": 1.3786,
+        "min": 1.335,
+        "max": 1.384
+      },
+      "median_val_return_dd": {
+        "mean": 0.7423,
+        "median": 0.742,
+        "q25": 0.7279,
+        "q75": 0.758,
+        "ci95_low": 0.7034,
+        "ci95_high": 0.7788,
+        "min": 0.689,
+        "max": 0.781
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 33.7689,
+          "median": 33.8361,
+          "q25": 33.3772,
+          "q75": 34.1362,
+          "ci95_low": 32.6808,
+          "ci95_high": 34.7952,
+          "min": 32.0732,
+          "max": 35.0822
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 45.9944,
+          "median": 46.0331,
+          "q25": 45.5181,
+          "q75": 46.4848,
+          "ci95_low": 44.7295,
+          "ci95_high": 47.2176,
+          "min": 43.7714,
+          "max": 47.4483
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 2229.29,
+          "median": 2231.0,
+          "q25": 2201.75,
+          "q75": 2258.25,
+          "ci95_low": 2159.95,
+          "ci95_high": 2290.0,
+          "min": 2126.0,
+          "max": 2339.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G6": {
+          "mean": 1640.04,
+          "median": 1641.0,
+          "q25": 1618.75,
+          "q75": 1662.0,
+          "ci95_low": 1563.475,
+          "ci95_high": 1721.125,
+          "min": 1556.0,
+          "max": 1748.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "quality_focused": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 1066.24,
+        "median": 1066.0,
+        "q25": 1047.5,
+        "q75": 1091.25,
+        "ci95_low": 1005.375,
+        "ci95_high": 1117.625,
+        "min": 985.0,
+        "max": 1134.0
+      },
+      "rejected_count": {
+        "mean": 5535.5,
+        "median": 5534.5,
+        "q25": 5500.0,
+        "q75": 5565.0,
+        "ci95_low": 5428.225,
+        "ci95_high": 5640.35,
+        "min": 5413.0,
+        "max": 5669.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 16.1508,
+        "median": 16.0885,
+        "q25": 15.8871,
+        "q75": 16.4792,
+        "ci95_low": 15.2749,
+        "ci95_high": 16.8824,
+        "min": 15.0612,
+        "max": 17.0549
+      },
+      "median_robustness": {
+        "mean": 0.6746,
+        "median": 0.674,
+        "q25": 0.6704,
+        "q75": 0.6791,
+        "ci95_low": 0.6635,
+        "ci95_high": 0.6855,
+        "min": 0.6515,
+        "max": 0.689
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 8.6377,
+        "median": 8.7375,
+        "q25": 8.0435,
+        "q75": 9.3276,
+        "ci95_low": 6.8916,
+        "ci95_high": 10.1919,
+        "min": 5.9813,
+        "max": 10.501
+      },
+      "median_val_return_pct": {
+        "mean": 15.156,
+        "median": 15.15,
+        "q25": 14.9812,
+        "q75": 15.32,
+        "ci95_low": 14.7243,
+        "ci95_high": 15.647,
+        "min": 14.5,
+        "max": 15.71
+      },
+      "median_val_drawdown_pct": {
+        "mean": 7.4454,
+        "median": 7.4525,
+        "q25": 7.3288,
+        "q75": 7.55,
+        "ci95_low": 7.0974,
+        "ci95_high": 7.8205,
+        "min": 7.04,
+        "max": 7.9
+      },
+      "median_val_pf": {
+        "mean": 1.455,
+        "median": 1.455,
+        "q25": 1.4441,
+        "q75": 1.4632,
+        "ci95_low": 1.43,
+        "ci95_high": 1.4881,
+        "min": 1.415,
+        "max": 1.497
+      },
+      "median_val_return_dd": {
+        "mean": 1.8961,
+        "median": 1.8882,
+        "q25": 1.862,
+        "q75": 1.9332,
+        "ci95_low": 1.8169,
+        "ci95_high": 1.9872,
+        "min": 1.785,
+        "max": 2.035
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 18.8035,
+          "median": 18.7467,
+          "q25": 18.5404,
+          "q75": 19.0739,
+          "ci95_low": 17.9186,
+          "ci95_high": 19.9084,
+          "min": 17.6416,
+          "max": 20.3434
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 79.2795,
+          "median": 79.3299,
+          "q25": 78.9065,
+          "q75": 79.6256,
+          "ci95_low": 78.3727,
+          "ci95_high": 80.1143,
+          "min": 78.228,
+          "max": 80.5409
+        },
+        "G6": {
+          "mean": 45.9944,
+          "median": 46.0331,
+          "q25": 45.5181,
+          "q75": 46.4848,
+          "ci95_low": 44.7295,
+          "ci95_high": 47.2176,
+          "min": 43.7714,
+          "max": 47.4483
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G2": {
+          "mean": 1241.36,
+          "median": 1239.0,
+          "q25": 1221.75,
+          "q75": 1261.25,
+          "ci95_low": 1184.85,
+          "ci95_high": 1324.625,
+          "min": 1149.0,
+          "max": 1339.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 4003.67,
+          "median": 3996.0,
+          "q25": 3976.0,
+          "q75": 4029.75,
+          "ci95_low": 3912.325,
+          "ci95_high": 4102.575,
+          "min": 3894.0,
+          "max": 4104.0
+        },
+        "G6": {
+          "mean": 290.47,
+          "median": 289.0,
+          "q25": 280.0,
+          "q75": 303.0,
+          "ci95_low": 260.475,
+          "ci95_high": 327.1,
+          "min": 238.0,
+          "max": 331.0
+        },
+        "G7": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "robustness_focused": {
+      "n_replications": 100,
+      "accepted_count": {
+        "mean": 405.8,
+        "median": 403.0,
+        "q25": 390.75,
+        "q75": 420.25,
+        "ci95_low": 371.95,
+        "ci95_high": 445.675,
+        "min": 357.0,
+        "max": 454.0
+      },
+      "rejected_count": {
+        "mean": 6195.94,
+        "median": 6197.5,
+        "q25": 6161.75,
+        "q75": 6230.25,
+        "ci95_low": 6088.3,
+        "ci95_high": 6296.35,
+        "min": 6057.0,
+        "max": 6332.0
+      },
+      "acceptance_rate_pct": {
+        "mean": 6.1466,
+        "median": 6.1104,
+        "q25": 5.9136,
+        "q75": 6.3703,
+        "ci95_low": 5.648,
+        "ci95_high": 6.7536,
+        "min": 5.3838,
+        "max": 6.8226
+      },
+      "median_robustness": {
+        "mean": 0.8439,
+        "median": 0.8435,
+        "q25": 0.8397,
+        "q75": 0.848,
+        "ci95_low": 0.8312,
+        "ci95_high": 0.8573,
+        "min": 0.83,
+        "max": 0.864
+      },
+      "false_acceptance_rate_pct": {
+        "mean": 0.0,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "median_val_return_pct": {
+        "mean": 14.0251,
+        "median": 14.055,
+        "q25": 13.7538,
+        "q75": 14.3325,
+        "ci95_low": 13.2546,
+        "ci95_high": 14.6105,
+        "min": 13.075,
+        "max": 14.845
+      },
+      "median_val_drawdown_pct": {
+        "mean": 7.273,
+        "median": 7.2625,
+        "q25": 7.08,
+        "q75": 7.47,
+        "ci95_low": 6.6816,
+        "ci95_high": 7.81,
+        "min": 6.6,
+        "max": 7.87
+      },
+      "median_val_pf": {
+        "mean": 1.339,
+        "median": 1.3393,
+        "q25": 1.3191,
+        "q75": 1.3567,
+        "ci95_low": 1.2914,
+        "ci95_high": 1.3901,
+        "min": 1.266,
+        "max": 1.3995
+      },
+      "median_val_return_dd": {
+        "mean": 1.7811,
+        "median": 1.7785,
+        "q25": 1.7312,
+        "q75": 1.834,
+        "ci95_low": 1.6519,
+        "ci95_high": 1.9329,
+        "min": 1.6405,
+        "max": 1.9965
+      },
+      "gate_rejection_rate_pct": {
+        "G1": {
+          "mean": 4.545,
+          "median": 4.554,
+          "q25": 4.3873,
+          "q75": 4.708,
+          "ci95_low": 4.0163,
+          "ci95_high": 4.9939,
+          "min": 3.9315,
+          "max": 5.1028
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 79.2795,
+          "median": 79.3299,
+          "q25": 78.9065,
+          "q75": 79.6256,
+          "ci95_low": 78.3727,
+          "ci95_high": 80.1143,
+          "min": 78.228,
+          "max": 80.5409
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 66.0508,
+          "median": 66.0116,
+          "q25": 65.7282,
+          "q75": 66.4359,
+          "ci95_low": 64.9594,
+          "ci95_high": 67.1669,
+          "min": 64.5171,
+          "max": 67.3923
+        }
+      },
+      "first_gate_rejections": {
+        "G1": {
+          "mean": 300.05,
+          "median": 302.0,
+          "q25": 289.0,
+          "q75": 311.0,
+          "ci95_low": 268.85,
+          "ci95_high": 331.0,
+          "min": 257.0,
+          "max": 341.0
+        },
+        "G2": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G3": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G4": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G5": {
+          "mean": 4995.99,
+          "median": 4992.5,
+          "q25": 4963.0,
+          "q75": 5023.5,
+          "ci95_low": 4895.475,
+          "ci95_high": 5096.525,
+          "min": 4830.0,
+          "max": 5110.0
+        },
+        "G6": {
+          "mean": 0.0,
+          "median": 0.0,
+          "q25": 0.0,
+          "q75": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "G7": {
+          "mean": 899.9,
+          "median": 901.5,
+          "q25": 882.75,
+          "q75": 916.25,
+          "ci95_low": 833.425,
+          "ci95_high": 959.625,
+          "min": 812.0,
+          "max": 982.0
+        }
+      }
+    }
+  },
+  "statistical_tests": {
+    "pairwise_wilcoxon": {
+      "acceptance_rate_pct": {
+        "all_gates_vs_no_gates": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_minimal": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_drawdown_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_profitability_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_quality_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_robustness_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        }
+      },
+      "median_robustness": {
+        "all_gates_vs_no_gates": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_minimal": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_drawdown_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_profitability_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_quality_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_robustness_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        }
+      },
+      "false_acceptance_rate_pct": {
+        "all_gates_vs_no_gates": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_minimal": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_drawdown_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_profitability_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_quality_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_robustness_focused": {
+          "W": null,
+          "z": null,
+          "p_value": null,
+          "n": 0,
+          "note": "Too few non-zero paired differences"
+        }
+      },
+      "median_val_return_pct": {
+        "all_gates_vs_no_gates": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_minimal": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_drawdown_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_profitability_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_quality_focused": {
+          "W": 4.0,
+          "z": -8.668,
+          "p_value": 4.397113554e-18,
+          "n": 100
+        },
+        "all_gates_vs_robustness_focused": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        }
+      },
+      "median_val_return_dd": {
+        "all_gates_vs_no_gates": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_minimal": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_drawdown_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_profitability_only": {
+          "W": 0,
+          "z": -8.6818,
+          "p_value": 3.896559845e-18,
+          "n": 100
+        },
+        "all_gates_vs_quality_focused": {
+          "W": 903.0,
+          "z": -5.4867,
+          "p_value": 4.094294007e-08,
+          "n": 99
+        },
+        "all_gates_vs_robustness_focused": {
+          "W": 53.0,
+          "z": -8.4071,
+          "p_value": 4.20142361e-17,
+          "n": 98
+        }
+      }
+    },
+    "bonferroni_correction": {
+      "acceptance_rate_pct": {
+        "all_gates_vs_no_gates": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_minimal": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_drawdown_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_profitability_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_quality_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_robustness_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        }
+      },
+      "median_robustness": {
+        "all_gates_vs_no_gates": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_minimal": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_drawdown_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_profitability_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_quality_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_robustness_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        }
+      },
+      "false_acceptance_rate_pct": {
+        "all_gates_vs_no_gates": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 1.948279923e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_minimal": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 1.948279923e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_drawdown_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 1.948279923e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_profitability_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 1.948279923e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_quality_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 1.948279923e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        }
+      },
+      "median_val_return_pct": {
+        "all_gates_vs_no_gates": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_minimal": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_drawdown_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_profitability_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_quality_focused": {
+          "raw_p": 4.397113554e-18,
+          "bonferroni_p": 2.638268132e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_robustness_focused": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        }
+      },
+      "median_val_return_dd": {
+        "all_gates_vs_no_gates": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_minimal": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_drawdown_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_profitability_only": {
+          "raw_p": 3.896559845e-18,
+          "bonferroni_p": 2.337935907e-17,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_quality_focused": {
+          "raw_p": 4.094294007e-08,
+          "bonferroni_p": 2.456576404e-07,
+          "significant_at_005": true,
+          "significant_at_001": true
+        },
+        "all_gates_vs_robustness_focused": {
+          "raw_p": 4.20142361e-17,
+          "bonferroni_p": 2.520854166e-16,
+          "significant_at_005": true,
+          "significant_at_001": true
+        }
+      }
+    },
+    "friedman_median_robustness": {
+      "chi2": 545.3175,
+      "df": 6,
+      "p_value": 1.41032867e-75,
+      "n": 100,
+      "k": 7
+    },
+    "friedman_false_acceptance_rate_pct": {
+      "chi2": 578.1857,
+      "df": 6,
+      "p_value": 2.648883884e-79,
+      "n": 100,
+      "k": 7
+    }
+  }
+}
