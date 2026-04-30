@@ -1,10 +1,8 @@
-# Frozen historical data placement
+# Frozen historical data
 
-The public repository includes `MANIFEST.json` for the paper's frozen
-historical dataset, but it does not include the broker M5 OHLCV CSV files.
-
-To rerun the long historical evidence build, place the 50 manifest-matching
-files in this directory:
+This directory contains the paper's frozen historical M5 OHLCV CSV files and
+the matching `MANIFEST.json` checksum manifest. It is the self-contained input
+dataset for rerunning the historical ablation pipeline.
 
 ```text
 data/frozen_dataset/
@@ -15,7 +13,7 @@ data/frozen_dataset/
   XTIUSD_M5.csv
 ```
 
-Then verify the checksums before building evidence:
+Verify the checksums before building evidence:
 
 ```powershell
 python historical/section6_run.py --stage verify --data-dir data/frozen_dataset

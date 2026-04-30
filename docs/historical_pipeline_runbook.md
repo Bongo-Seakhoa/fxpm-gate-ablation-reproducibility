@@ -5,11 +5,11 @@ for the paper:
 
 1. Rerun the cheap historical materialisation and analysis from archived
    candidate evidence.
-2. Rerun the full historical evidence build if the frozen broker CSV files
-   are available locally.
+2. Rerun the full historical evidence build from the committed frozen broker
+   CSV files.
 
-The raw broker M5 CSV files are not committed. The dataset manifest and
-checksums are committed in `data/frozen_dataset/MANIFEST.json`.
+The raw broker M5 CSV files, dataset manifest, and checksums are committed in
+`data/frozen_dataset/`.
 
 ## Repository layout
 
@@ -19,7 +19,7 @@ runtime/                            FXPM runtime modules used by Section 6
 historical_results/evidence_build/  archived build manifest, slot index, candidates
 historical_results/presets/         archived preset winners and rejection logs
 historical_results/analysis/        archived paper-facing historical tables
-data/frozen_dataset/MANIFEST.json   frozen-data identity and checksums
+data/frozen_dataset/                frozen CSV data, identity, and checksums
 ```
 
 The archived evidence omits `evidence_build/features/` because that cache is
@@ -68,9 +68,10 @@ python historical/section6_run.py --stage materialise --preset all_gates --outpu
 
 ## Rerun the full historical evidence build
 
-Place the 50 manifest-matching CSV files beside the committed manifest:
+The 50 manifest-matching CSV files are committed beside the manifest:
 
 ```text
+data/frozen_dataset/MANIFEST.json
 data/frozen_dataset/AU200_M5.csv
 data/frozen_dataset/AUDCAD_M5.csv
 ...

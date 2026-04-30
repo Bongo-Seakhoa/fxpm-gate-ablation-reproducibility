@@ -7,8 +7,8 @@ and historical ablation layers of:
 
 It lets reviewers inspect the gate logic, rerun the calibrated Monte Carlo
 study, rerun the historical materialisation/analysis from archived candidate
-evidence, and rerun the full historical evidence build when the frozen broker
-CSV files are available locally.
+evidence, and rerun the full historical evidence build from the committed
+frozen broker CSV files.
 
 ## Contents
 
@@ -19,7 +19,7 @@ CSV files are available locally.
 - `historical/` - Section 6 historical pipeline: verify, evidence, materialise, analyse.
 - `runtime/` - FXPM runtime modules required by the historical pipeline.
 - `historical_results/` - archived historical candidate evidence, preset outputs, rejection logs, and analysis tables.
-- `data/frozen_dataset/MANIFEST.json` - frozen historical data manifest and checksums.
+- `data/frozen_dataset/` - frozen historical CSV data plus manifest/checksums.
 - `docs/simulation_design.md` - compact description of the generator, thresholds, presets, and seeds.
 - `docs/historical_pipeline_runbook.md` - commands for cached and full historical reproduction.
 - `docs/historical_far_g7_note.md` - clarification of the historical FAR/G7 relationship.
@@ -77,8 +77,8 @@ python historical/section6_run.py --stage analyse --output-root historical_resul
 python scripts/verify_historical_results.py
 ```
 
-For the full historical rerun, place the 50 manifest-matching broker CSV files
-in `data/frozen_dataset/` and run:
+For the full historical rerun, use the committed frozen CSV files in
+`data/frozen_dataset/` and run:
 
 ```powershell
 python historical/section6_run.py --stage verify --data-dir data/frozen_dataset --output-root outputs/empirical_results_v2
@@ -105,9 +105,8 @@ The paper's historical table is based on `historical_results/analysis/manuscript
 
 ## Data availability
 
-This repository does not include the raw broker M5 CSV data. It does include
-the frozen-data manifest/checksums, cached historical candidate evidence,
-historical preset outputs, rejection logs, and analysis exports. That supports
-inspection and rerun of the historical ablation tables without exposing the
-raw broker dataset; a full evidence rebuild is possible when the manifest-
-matching CSVs are placed locally.
+This repository includes the raw frozen M5 CSV files used by the paper, the
+frozen-data manifest/checksums, cached historical candidate evidence,
+historical preset outputs, rejection logs, and analysis exports. A clone of
+the repository is therefore sufficient to rerun both the Monte Carlo layer and
+the historical ablation pipeline.

@@ -216,7 +216,6 @@ def find_frozen_dir(output_dir: Path, explicit: str = "") -> Path:
       1. Explicit --data-dir argument
       2. {output_dir}/frozen_dataset/
       3. Repository data/frozen_dataset/
-      4. First existing all_gates frozen dataset from the original paper tree
     """
     if explicit:
         p = Path(explicit)
@@ -229,19 +228,10 @@ def find_frozen_dir(output_dir: Path, explicit: str = "") -> Path:
     if candidate.exists() and (candidate / "MANIFEST.json").exists():
         return candidate
 
-    # Public repo layout. The repository includes the manifest; users who
-    # rerun Stage A/B place the matching CSV files beside it.
+    # Public repo layout. The repository includes the manifest and frozen CSVs.
     candidate = REPO_ROOT / "data" / "frozen_dataset"
     if candidate.exists() and (candidate / "MANIFEST.json").exists():
         return candidate
-
-    # Check original paper-tree v1 results (two known locations)
-    for v1 in [
-        SCRIPT_DIR / "empirical_results" / "frozen_dataset",
-        SCRIPT_DIR / "empirical_results" / "ISM2026-EMPIRICAL-ABLATION-ALL_GATES" / "frozen_dataset",
-    ]:
-        if v1.exists() and (v1 / "MANIFEST.json").exists():
-            return v1
 
     raise FileNotFoundError(
         "Could not find frozen dataset. Use --data-dir to specify location."

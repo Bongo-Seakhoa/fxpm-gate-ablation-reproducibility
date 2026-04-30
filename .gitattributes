@@ -1,0 +1,2 @@
+data/frozen_dataset/*.csv binary
+historical_results/evidence_build/candidates/**/*.parquet binary
