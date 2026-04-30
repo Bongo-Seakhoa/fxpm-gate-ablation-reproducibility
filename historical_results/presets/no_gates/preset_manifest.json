@@ -1,0 +1,27 @@
+{
+  "study_id": "ISM2026-SECTION6-REWORK",
+  "preset_name": "no_gates",
+  "gate_config": {
+    "name": "no_gates",
+    "description": "All gates disabled (negative baseline for ablation comparison)",
+    "g1_min_trades": false,
+    "g2_max_drawdown": false,
+    "g3_train_profitability": false,
+    "g4_val_return": false,
+    "g5_return_dd_ratio": false,
+    "g6_val_profit_factor": false,
+    "g7_robustness_gap": false,
+    "g1_threshold": null,
+    "g2_threshold": null,
+    "g3_threshold": null,
+    "g4_threshold": null,
+    "g5_threshold": null,
+    "g6_threshold": null,
+    "g7_threshold": null
+  },
+  "evidence_cache_key": "42086e6c3223a8678267348f659fcbee2659b782370df446ed18b90997fb6c46",
+  "total_slots": 1200,
+  "filled_slots": 1111,
+  "no_trade_slots": 89,
+  "materialised_at": "2026-03-25T11:12:37.930378+00:00"
+}

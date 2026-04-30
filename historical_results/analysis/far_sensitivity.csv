@@ -1,0 +1,8 @@
+preset,far_pct_rho_lt_0_4,far_pct_rho_lt_0_5,far_pct_rho_lt_0_6
+all_gates,11.22,14.07,17.11
+no_gates,28.44,30.87,33.39
+drawdown_only,28.38,30.81,33.33
+profitability_only,12.97,16.43,20.22
+minimal,13.56,17.11,21.44
+quality_focused,6.72,9.21,12.03
+robustness_focused,7.81,11.08,14.35

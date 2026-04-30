@@ -1,0 +1,23 @@
+# FXPM Research Dependencies - Additional packages for academic work
+# Generated: 2026-03-10
+# Install: pip install -r requirements-research.txt
+#
+# These are required for experiment execution, statistical analysis,
+# and report generation. They are NOT required for operational trading.
+
+# Core runtime (included by reference)
+-r requirements.txt
+
+# Testing
+pytest>=7.0
+
+# Statistical analysis
+scipy>=1.11
+
+# Visualisation and reporting
+matplotlib>=3.7
+seaborn>=0.12
+
+# Dashboard (optional)
+Flask>=2.3,<3.0
+plyer>=2.1.0

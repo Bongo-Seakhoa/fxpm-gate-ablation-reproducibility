@@ -1,0 +1,13 @@
+# FXPM Runtime Dependencies - Pinned for Reproducibility
+# Generated: 2026-03-10
+# Python: 3.12.10
+# Purpose: Exact environment reproduction for academic research
+#
+# Install: pip install -r requirements.txt
+
+numpy==1.26.4
+pandas==2.2.3
+optuna==4.7.0
+numba==0.63.1
+reportlab==4.4.2
+MetaTrader5==5.0.4993

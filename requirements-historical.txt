@@ -1,0 +1,9 @@
+# Historical ablation reproduction environment.
+#
+# Install from the repository root:
+#   python -m pip install -r requirements-historical.txt
+
+-r runtime/requirements-research.txt
+
+# pandas Parquet IO for cached candidate evidence and regenerated evidence.
+pyarrow>=15.0

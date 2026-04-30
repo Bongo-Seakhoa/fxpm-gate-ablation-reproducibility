@@ -1,0 +1,8 @@
+preset,total_slots,filled_slots,no_trade_slots,fill_rate_pct,TREND_filled,TREND_total,TREND_fill_pct,RANGE_filled,RANGE_total,RANGE_fill_pct,BREAKOUT_filled,BREAKOUT_total,BREAKOUT_fill_pct,CHOP_filled,CHOP_total,CHOP_fill_pct
+all_gates,1200,526,674,43.8,194,300,64.7,141,300,47.0,17,300,5.7,174,300,58.0
+no_gates,1200,1111,89,92.6,286,300,95.3,281,300,93.7,261,300,87.0,283,300,94.3
+drawdown_only,1200,1110,90,92.5,285,300,95.0,281,300,93.7,261,300,87.0,283,300,94.3
+profitability_only,1200,925,275,77.1,251,300,83.7,251,300,83.7,174,300,58.0,249,300,83.0
+minimal,1200,900,300,75.0,277,300,92.3,267,300,89.0,84,300,28.0,272,300,90.7
+quality_focused,1200,923,277,76.9,246,300,82.0,246,300,82.0,181,300,60.3,250,300,83.3
+robustness_focused,1200,704,496,58.7,228,300,76.0,198,300,66.0,48,300,16.0,230,300,76.7

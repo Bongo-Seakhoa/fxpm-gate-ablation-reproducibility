@@ -1,0 +1,323 @@
+{
+  "baseline": "all_gates",
+  "pairwise_vs_baseline": [
+    {
+      "preset_a": "all_gates",
+      "preset_b": "no_gates",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 585,
+        "n00_neither": 89,
+        "chi2_approx": 583.0017,
+        "discordant_pairs": 585
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.4145,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 7.393547603776528e-27
+        }
+      }
+    },
+    {
+      "preset_a": "all_gates",
+      "preset_b": "drawdown_only",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 584,
+        "n00_neither": 90,
+        "chi2_approx": 582.0017,
+        "discordant_pairs": 584
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.4145,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 7.393547603776528e-27
+        }
+      }
+    },
+    {
+      "preset_a": "all_gates",
+      "preset_b": "profitability_only",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 399,
+        "n00_neither": 275,
+        "chi2_approx": 397.0025,
+        "discordant_pairs": 399
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.3083,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 5.5719648223844e-17
+        }
+      }
+    },
+    {
+      "preset_a": "all_gates",
+      "preset_b": "minimal",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 374,
+        "n00_neither": 300,
+        "chi2_approx": 372.0027,
+        "discordant_pairs": 374
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.3991,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 2.2259158724964484e-25
+        }
+      }
+    },
+    {
+      "preset_a": "all_gates",
+      "preset_b": "quality_focused",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 397,
+        "n00_neither": 277,
+        "chi2_approx": 395.0025,
+        "discordant_pairs": 397
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.3933,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 1.0114520744886418e-24
+        }
+      }
+    },
+    {
+      "preset_a": "all_gates",
+      "preset_b": "robustness_focused",
+      "mcnemar": {
+        "n11_both_filled": 526,
+        "n10_a_only": 0,
+        "n01_b_only": 178,
+        "n00_neither": 496,
+        "chi2_approx": 176.0056,
+        "discordant_pairs": 178
+      },
+      "quality_paired": {
+        "common_filled_slots": 526,
+        "cohens_d": -0.3736,
+        "wilcoxon": {
+          "statistic": 0.0,
+          "p_value": 6.513351079976358e-23
+        }
+      }
+    }
+  ],
+  "symbol_blocked": {
+    "symbol_count": 50,
+    "acceptance_pct": {
+      "label": "Acceptance %",
+      "friedman": {
+        "chi2": 277.3191,
+        "p_value": 5.889194229091734e-57,
+        "k": 7,
+        "n": 50
+      },
+      "pairwise_vs_baseline": [
+        {
+          "preset_a": "all_gates",
+          "preset_b": "no_gates",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 7.460092387491276e-10,
+          "bonferroni_p": 4.476055432494766e-09,
+          "median_delta": -50.0
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "drawdown_only",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 7.483773092943119e-10,
+          "bonferroni_p": 4.490263855765871e-09,
+          "median_delta": -50.0
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "profitability_only",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 7.470233007012134e-10,
+          "bonferroni_p": 4.48213980420728e-09,
+          "median_delta": -33.3334
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "minimal",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 7.44659079609435e-10,
+          "bonferroni_p": 4.46795447765661e-09,
+          "median_delta": -33.3333
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "quality_focused",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 7.438163451773046e-10,
+          "bonferroni_p": 4.462898071063827e-09,
+          "median_delta": -33.3333
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "robustness_focused",
+          "metric": "acceptance_pct",
+          "wilcoxon_statistic": 0.0,
+          "p_value": 1.5646117861542172e-09,
+          "bonferroni_p": 9.387670716925303e-09,
+          "median_delta": -12.5
+        }
+      ]
+    },
+    "median_rho": {
+      "label": "Median rho",
+      "friedman": {
+        "chi2": 200.4,
+        "p_value": 1.5597907702955539e-40,
+        "k": 7,
+        "n": 50
+      },
+      "pairwise_vs_baseline": [
+        {
+          "preset_a": "all_gates",
+          "preset_b": "no_gates",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 42.0,
+          "p_value": 3.315810590164483e-08,
+          "bonferroni_p": 1.9894863540986896e-07,
+          "median_delta": 0.1411
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "drawdown_only",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 42.0,
+          "p_value": 3.315810590164483e-08,
+          "bonferroni_p": 1.9894863540986896e-07,
+          "median_delta": 0.1411
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "profitability_only",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 174.0,
+          "p_value": 2.1741717684153328e-05,
+          "bonferroni_p": 0.00013045030610491998,
+          "median_delta": 0.0548
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "minimal",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 384.0,
+          "p_value": 0.08729898075955171,
+          "bonferroni_p": 0.5237938845573102,
+          "median_delta": 0.0157
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "quality_focused",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 203.0,
+          "p_value": 4.632833685681215e-05,
+          "bonferroni_p": 0.0002779700211408729,
+          "median_delta": -0.0882
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "robustness_focused",
+          "metric": "median_rho",
+          "wilcoxon_statistic": 224.0,
+          "p_value": 0.0001889254064895196,
+          "bonferroni_p": 0.0011335524389371175,
+          "median_delta": -0.0533
+        }
+      ]
+    },
+    "far_pct": {
+      "label": "FAR %",
+      "friedman": {
+        "chi2": 200.6619,
+        "p_value": 1.3718618383599287e-40,
+        "k": 7,
+        "n": 50
+      },
+      "pairwise_vs_baseline": [
+        {
+          "preset_a": "all_gates",
+          "preset_b": "no_gates",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 45.5,
+          "p_value": 1.6955729197159713e-08,
+          "bonferroni_p": 1.0173437518295828e-07,
+          "median_delta": -20.4658
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "drawdown_only",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 46.5,
+          "p_value": 1.7963397681678177e-08,
+          "bonferroni_p": 1.0778038609006906e-07,
+          "median_delta": -20.4658
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "profitability_only",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 252.5,
+          "p_value": 0.02107645573925182,
+          "bonferroni_p": 0.12645873443551092,
+          "median_delta": -2.1723
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "minimal",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 237.0,
+          "p_value": 0.002603564076397992,
+          "bonferroni_p": 0.015621384458387953,
+          "median_delta": -4.6382
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "quality_focused",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 150.0,
+          "p_value": 0.006880805613713711,
+          "bonferroni_p": 0.041284833682282265,
+          "median_delta": 0.8592
+        },
+        {
+          "preset_a": "all_gates",
+          "preset_b": "robustness_focused",
+          "metric": "far_pct",
+          "wilcoxon_statistic": 209.0,
+          "p_value": 0.1302620746346108,
+          "bonferroni_p": 0.7815724478076649,
+          "median_delta": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-03-31T13:59:57.754212+00:00",
+  "source_presets": {
+    "all_gates": "historical_results/presets/all_gates",
+    "no_gates": "historical_results/presets/no_gates",
+    "drawdown_only": "historical_results/presets/drawdown_only",
+    "profitability_only": "historical_results/presets/profitability_only",
+    "minimal": "historical_results/presets/minimal",
+    "quality_focused": "historical_results/presets/quality_focused",
+    "robustness_focused": "historical_results/presets/robustness_focused"
+  },
+  "output_files": [
+    "comparative_metrics.json",
+    "statistical_tests.json",
+    "tables_for_paper.json",
+    "fill_rates.csv",
+    "convergence_matrix.csv",
+    "quality_by_regime.csv",
+    "manuscript_table_7.csv",
+    "far_sensitivity.csv",
+    "symbol_aggregates.csv"
+  ]
+}

@@ -1,0 +1,8 @@
+preset,active_gates,gate_count,accepted_slots,acceptance_pct,median_rho,far_pct,median_val_return,median_val_dd,median_pf,median_return_dd
+all_gates,"G1, G2, G3, G4, G5, G6, G7",7,526,43.8,1.117,14.07,10.86,2.75,2.035,4.586
+no_gates,none,0,1111,92.6,0.939,30.87,3.99,1.9,1.725,2.205
+drawdown_only,G2,1,1110,92.5,0.941,30.81,3.97,1.9,1.726,2.196
+profitability_only,"G3, G6",2,925,77.1,0.989,16.43,4.93,1.95,2.06,2.926
+minimal,"G1, G2",2,900,75.0,1.037,17.11,5.57,2.35,1.826,2.835
+quality_focused,"G2, G5, G6",3,923,76.9,1.183,9.21,5.45,1.64,2.466,3.365
+robustness_focused,"G1, G5, G7",3,704,58.7,1.199,11.08,7.58,2.02,2.123,3.995

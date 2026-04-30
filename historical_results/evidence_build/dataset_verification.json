@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "files": {
+    "AU200_M5.csv": {
+      "status": "OK"
+    },
+    "AUDCAD_M5.csv": {
+      "status": "OK"
+    },
+    "AUDJPY_M5.csv": {
+      "status": "OK"
+    },
+    "AUDNZD_M5.csv": {
+      "status": "OK"
+    },
+    "AUDUSD_M5.csv": {
+      "status": "OK"
+    },
+    "BCHUSD_M5.csv": {
+      "status": "OK"
+    },
+    "BTCETH_M5.csv": {
+      "status": "OK"
+    },
+    "BTCUSD_M5.csv": {
+      "status": "OK"
+    },
+    "CADJPY_M5.csv": {
+      "status": "OK"
+    },
+    "CHFJPY_M5.csv": {
+      "status": "OK"
+    },
+    "DE30_M5.csv": {
+      "status": "OK"
+    },
+    "DOGUSD_M5.csv": {
+      "status": "OK"
+    },
+    "ES35_M5.csv": {
+      "status": "OK"
+    },
+    "ETHUSD_M5.csv": {
+      "status": "OK"
+    },
+    "EU50_M5.csv": {
+      "status": "OK"
+    },
+    "EURAUD_M5.csv": {
+      "status": "OK"
+    },
+    "EURCAD_M5.csv": {
+      "status": "OK"
+    },
+    "EURCHF_M5.csv": {
+      "status": "OK"
+    },
+    "EURGBP_M5.csv": {
+      "status": "OK"
+    },
+    "EURJPY_M5.csv": {
+      "status": "OK"
+    },
+    "EURUSD_M5.csv": {
+      "status": "OK"
+    },
+    "GBPAUD_M5.csv": {
+      "status": "OK"
+    },
+    "GBPCAD_M5.csv": {
+      "status": "OK"
+    },
+    "GBPCHF_M5.csv": {
+      "status": "OK"
+    },
+    "GBPJPY_M5.csv": {
+      "status": "OK"
+    },
+    "GBPUSD_M5.csv": {
+      "status": "OK"
+    },
+    "HK50_M5.csv": {
+      "status": "OK"
+    },
+    "JP225_M5.csv": {
+      "status": "OK"
+    },
+    "LTCUSD_M5.csv": {
+      "status": "OK"
+    },
+    "NZDJPY_M5.csv": {
+      "status": "OK"
+    },
+    "NZDUSD_M5.csv": {
+      "status": "OK"
+    },
+    "SOLUSD_M5.csv": {
+      "status": "OK"
+    },
+    "TRXUSD_M5.csv": {
+      "status": "OK"
+    },
+    "UK100_M5.csv": {
+      "status": "OK"
+    },
+    "US100_M5.csv": {
+      "status": "OK"
+    },
+    "US30_M5.csv": {
+      "status": "OK"
+    },
+    "US500_M5.csv": {
+      "status": "OK"
+    },
+    "USDCAD_M5.csv": {
+      "status": "OK"
+    },
+    "USDCHF_M5.csv": {
+      "status": "OK"
+    },
+    "USDJPY_M5.csv": {
+      "status": "OK"
+    },
+    "USDMXN_M5.csv": {
+      "status": "OK"
+    },
+    "USDNOK_M5.csv": {
+      "status": "OK"
+    },
+    "USDSGD_M5.csv": {
+      "status": "OK"
+    },
+    "USDZAR_M5.csv": {
+      "status": "OK"
+    },
+    "XAGUSD_M5.csv": {
+      "status": "OK"
+    },
+    "XAUUSD_M5.csv": {
+      "status": "OK"
+    },
+    "XBRUSD_M5.csv": {
+      "status": "OK"
+    },
+    "XNGUSD_M5.csv": {
+      "status": "OK"
+    },
+    "XRPUSD_M5.csv": {
+      "status": "OK"
+    },
+    "XTIUSD_M5.csv": {
+      "status": "OK"
+    }
+  },
+  "manifest_id": "FBS-M5-HISTORICAL-v1"
+}
